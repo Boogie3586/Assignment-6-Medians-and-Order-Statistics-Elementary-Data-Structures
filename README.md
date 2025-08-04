@@ -13,17 +13,29 @@ The goal is to implement these from scratch, analyze their time/space complexity
 
 assignment6/
 ├── part1_selection_algorithms/
+
 │ ├── deterministic_selection.py # Median of Medians Algorithm
+
 │ ├── randomized_selection.py # Randomized Quickselect Algorithm
+
 │
+
 ├── part2_data_structures/
+
 │ ├── array_matrix.py # Array and Matrix Operations
+
 │ ├── stack_queue.py # Stack and Queue Implementations
+
 │ ├── linked_list.py # Singly Linked List
+
 │
+
 ├── report/
+
 │ └── assignment6_report.pdf # Final analysis and discussion report
+
 │
+
 ├── README.md # Project documentation
 
 ---
