@@ -1,98 +1,92 @@
-# Assignment 6: Medians and Order Statistics & Elementary Data Structures
+# 📘 Assignment 6: Medians and Order Statistics & Elementary Data Structures
 
-This repository contains Python implementations and analyses for two major topics in algorithm design and data structures:
+This repository contains Python implementations and analyses for two major areas of algorithm design:
 
-- **Part 1:** Selection Algorithms (Deterministic and Randomized)
-- **Part 2:** Elementary Data Structures (Array, Stack, Queue, Linked List)
+- 🧮 **Part 1: Selection Algorithms (Order Statistics)**
+- 🧱 **Part 2: Elementary Data Structures**
+
+The goal is to implement these from scratch, analyze their time/space complexity, and discuss real-world applications.
 
 ---
 
-## 🔹 Part 1: Selection Algorithms
-
-### ✅ Files
-- `part1_selection_algorithms/deterministic_selection.py`: Median of Medians algorithm (worst-case linear time)
-- `part1_selection_algorithms/randomized_selection.py`: Randomized Quickselect algorithm (expected linear time)
-
-### 🚀 Usage
-```python
-from deterministic_selection import median_of_medians
-from randomized_selection import quickselect
-
-arr = [3, 1, 5, 2, 4, 6]
-k = 2  # Find 3rd smallest element (0-indexed)
-
-print("Deterministic:", median_of_medians(arr[:], k))
-print("Randomized:", quickselect(arr[:], k))
-
-##🔹 Part 2: Elementary Data Structures
-✅ Files
-part2_data_structures/array_matrix.py: Array operations (insert, delete, access)
-
-part2_data_structures/stack_queue.py: Stack and Queue using arrays
-
-part2_data_structures/linked_list.py: Singly linked list (insert, delete, traverse)
-
-### 🚀 Usage
-```python
-# Array
-from array_matrix import Array
-arr = Array()
-arr.insert(0, 10)
-print(arr.access(0))  # 10
-
-# Stack
-from stack_queue import Stack
-s = Stack()
-s.push(5)
-print(s.peek())  # 5
-
-# Queue
-from stack_queue import Queue
-q = Queue()
-q.enqueue(10)
-print(q.dequeue())  # 10
-
-# Linked List
-from linked_list import LinkedList
-ll = LinkedList()
-ll.insert_back(1)
-ll.insert_back(2)
-ll.traverse()  # 1 -> 2 -> None
-📊 Performance & Analysis
-See the report/assignment6_report.pdf for:
-
-Theoretical time & space complexity
-
-Empirical comparisons between deterministic and randomized selection
-
-Real-world applications of data structures
-
-## 📁 Directory Structure
+## 📂 Repository Structure
 
 assignment6/
 ├── part1_selection_algorithms/
-│   ├── deterministic_selection.py
-│   ├── randomized_selection.py
+│ ├── deterministic_selection.py # Median of Medians Algorithm
+│ ├── randomized_selection.py # Randomized Quickselect Algorithm
 │
 ├── part2_data_structures/
-│   ├── array_matrix.py
-│   ├── stack_queue.py
-│   ├── linked_list.py
+│ ├── array_matrix.py # Array and Matrix Operations
+│ ├── stack_queue.py # Stack and Queue Implementations
+│ ├── linked_list.py # Singly Linked List
 │
 ├── report/
-│   ├── assignment6_report.pdf
+│ └── assignment6_report.pdf # Final analysis and discussion report
 │
-├── README.md
+├── README.md # Project documentation
 
-##✅ How to Run
-Clone the repository:
+---
 
-git clone https://github.com/yourusername/assignment6.git
-cd assignment6
-Run any of the Python files:
+## 🧮 Part 1: Selection Algorithms
 
+### 🔍 Overview
 
-python part1_selection_algorithms/deterministic_selection.py
-Install any needed packages (e.g., for graphing):
+This part implements two algorithms for computing the \(k^{th}\) smallest element in an unsorted list:
 
-pip install matplotlib
+- **Deterministic Selection (Median of Medians):** Guarantees \(O(n)\) worst-case time  
+- **Randomized Quickselect:** Achieves \(O(n)\) expected time but can degrade to \(O(n^2)\) in rare cases  
+
+### 📄 Files
+
+- `part1_selection_algorithms/deterministic_selection.py`  
+- `part1_selection_algorithms/randomized_selection.py`  
+
+### 🧪 Example Usage
+
+`from deterministic_selection import median_of_medians
+from randomized_selection import quickselect
+arr = [7, 2, 9, 1, 5, 6, 8]
+k = 3  # Looking for the 4th smallest element (0-based)
+print("Deterministic:", median_of_medians(arr[:], k))
+print("Randomized:", quickselect(arr[:], k))`
+
+## 🧱 Part 2: Elementary Data Structures
+
+### 🔍 Overview
+
+This part focuses on building common data structures from scratch to understand their internal workings and performance characteristics.
+
+### 📄 Files
+-`part2_data_structures/array_matrix.py`
+
+-`part2_data_structures/stack_queue.py`
+
+-`part2_data_structures/linked_list.py`
+
+### 🧪 Example Usage
+
+# Array
+`from array_matrix import Array
+arr = Array()
+arr.insert(0, 42)
+print(arr.access(0))  # Output: 42
+`
+# Stack
+`from stack_queue import Stack
+s = Stack()
+s.push(10)
+print(s.pop())  # Output: 10
+`
+# Queue
+`from stack_queue import Queue
+q = Queue()
+q.enqueue(15)
+print(q.dequeue())  # Output: 15
+`
+# Linked List
+`from linked_list import LinkedList
+ll = LinkedList()
+ll.insert_back(1)
+ll.insert_back(2)
+ll.traverse()  # Output: 1 -> 2 -> None`
