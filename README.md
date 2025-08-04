@@ -24,7 +24,7 @@ k = 2  # Find 3rd smallest element (0-indexed)
 print("Deterministic:", median_of_medians(arr[:], k))
 print("Randomized:", quickselect(arr[:], k))
 
-🔹 Part 2: Elementary Data Structures
+##🔹 Part 2: Elementary Data Structures
 ✅ Files
 part2_data_structures/array_matrix.py: Array operations (insert, delete, access)
 
@@ -32,10 +32,8 @@ part2_data_structures/stack_queue.py: Stack and Queue using arrays
 
 part2_data_structures/linked_list.py: Singly linked list (insert, delete, traverse)
 
-🚀 Usage
-python
-Copy
-Edit
+### 🚀 Usage
+```python
 # Array
 from array_matrix import Array
 arr = Array()
@@ -69,9 +67,8 @@ Empirical comparisons between deterministic and randomized selection
 
 Real-world applications of data structures
 
-📁 Directory Structure
-Copy
-Edit
+## 📁 Directory Structure
+
 assignment6/
 ├── part1_selection_algorithms/
 │   ├── deterministic_selection.py
@@ -86,23 +83,16 @@ assignment6/
 │   ├── assignment6_report.pdf
 │
 ├── README.md
-✅ How to Run
+
+##✅ How to Run
 Clone the repository:
 
-bash
-Copy
-Edit
 git clone https://github.com/yourusername/assignment6.git
 cd assignment6
 Run any of the Python files:
 
-bash
-Copy
-Edit
+
 python part1_selection_algorithms/deterministic_selection.py
 Install any needed packages (e.g., for graphing):
 
-bash
-Copy
-Edit
 pip install matplotlib
